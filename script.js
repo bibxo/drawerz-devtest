@@ -1,4 +1,3 @@
-// FFmpeg.wasm setup
 const { createFFmpeg, fetchFile } = FFmpeg;
 let ffmpeg; 
 
@@ -462,7 +461,7 @@ function drawScene(isExporting = false, exportTimeOverride = null) {
         if (!layer.isVisible || layer.strokes.length === 0) return;
         targetCtx.save(); 
         targetCtx.globalAlpha = layer.opacity; 
-        targetCtx.globalCompositeOperation = 'source-over'; // Simplified: no blend modes
+        targetCtx.globalCompositeOperation = 'source-over'; 
 
         const animSettings = layer.animationSettings;
         const animSpeed = parseFloat(animSettings.animationSpeed); 
@@ -540,7 +539,7 @@ loadInput.addEventListener('change', (e) => {
                     layers = data.layers.map(loadedLayer => {
                         const defaultAnim = {};
                         for (const key in animationSliders) defaultAnim[key] = parseFloat(animationSliders[key].slider.defaultValue || 0);
-                        return createNewLayer( // Use createNewLayer to ensure all properties are set correctly
+                        return createNewLayer( 
                             loadedLayer.name || 'Loaded Layer',
                             loadedLayer.strokes || [],
                             { ...defaultAnim, ...(loadedLayer.animationSettings || {}) },
