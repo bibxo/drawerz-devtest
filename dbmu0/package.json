@@ -1,0 +1,23 @@
+{
+  "name": "drawerz-beta-3",
+  "version": "1.0.0",
+  "description": "Drawerz Beta 3: A creative web application for drawing, animating strokes with layers, and exporting your artwork as MP4 or GIF",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx vite",
+    "build": "npx vite build",
+    "preview": "npx vite preview"
+  },
+  "keywords": [
+    "drawing",
+    "animation",
+    "canvas",
+    "layers",
+    "export"
+  ],
+  "author": "Bixrail",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
